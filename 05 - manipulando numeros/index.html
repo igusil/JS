@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com numeros</title>
+    <style>
+        body{text-align: center; padding-top: 200px; font-style: italic; font-size: 20pt; color: antiquewhite;}
+        button{padding: 80px; text-align: center; background-color: blueviolet;}
+        section{padding-top: 15px;}
+    </style>
+</head>
+<body background="245.jpg">
+    <h1>Trabalhando com números</h1>
+    <button onclick="calcular()">
+        <strong>Clique Aqui</strong>
+    </button>
+
+    <section id="res">
+       <strong> Resultado</strong>
+    </section>
+    <script>
+        window.alert('Bem Vindo ao Site')
+        function calcular(){
+            let n1 = window.prompt("Digite um número: ")
+            let res = document.querySelector("section#res")
+
+            res.innerHTML = `Valor digitado é <strong>${n1}</strong>, o dobro é <strong>${n1*2}</strong> e a metade é <strong>${n1/2}</strong>!`
+        }
+    </script>
+</body>
+</html>

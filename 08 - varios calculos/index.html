@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;padding-top: auto;background-image: url(245.jpg);
+            color: antiquewhite; font-size: 20pt;font-style: italic;
+        }
+        button{
+            padding: 80px;background-image: url(245.jpg);color: antiquewhite;
+        }
+        section{
+            color:antiquewhite; font-size: 17pt;padding-top: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Cálculos em JS</h1>
+    <button id="area" onclick="clicar()"><strong>Clique Aqui</strong></button>
+
+    <section id="res">
+
+    </section>
+    <script>
+        let a = document.getElementById("area")
+        a.addEventListener('mouseenter', entrar)
+
+        function entrar(){
+            a.innerText = 'Entrou, clique aqui'
+
+        }
+        let b = document.getElementById("area")
+            a.addEventListener('mouseout', sair)
+
+        function sair(){
+            
+            a.innerText = 'Clique aqui'
+        }
+
+        function clicar(){
+
+            let nome = window.prompt("Qual o seu nome? ")
+            let n1 = Number(window.prompt(`Olá ${nome}, a seguir digite o número (Clique em OK)`))
+            
+            let res = document.querySelector('section#res')
+
+            res.innerHTML = `<p> O número a ser analisado é: <strong>${n1}</strong></p>`
+            res.innerHTML += `<p> O valor absoluto é <strong>${Math.abs(n1)}</strong></p>`
+            res.innerHTML += `<p> A sua parte inteira é <strong>${Math.trunc(n1)}</strong></p>`
+            res.innerHTML += `<p> O valor inteiro mais próximo é <strong>${Math.round(n1)}</strong></p>`
+            res.innerHTML += `<p> A sua raiz quadrada é <strong>${Math.sqrt(n1)}</strong></p>`
+            res.innerHTML += `<p> A sua raiz cúbica é <strong>${Math.cbrt(n1)}</strong></p>`
+            res.innerHTML +=  `<p>O valor de <strong>${n1}</strong><sup>2</sup> é <strong>${Math.pow(n1, 2)}</strong></p>`
+            res.innerHTML += `<p> O valor de <strong/>${n1}</strong><sup>3</sup> é <strong>${Math.pow(n1, 3)}</strong></p>`
+            
+        }
+        
+    </script>
+</body>
+</html>

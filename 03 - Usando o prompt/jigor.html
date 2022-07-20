@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        body {font: 20pt italic;color: antiquewhite; text-align: center; padding-top: 25px;}
+        button{font-size: 12pt; padding: 30px; text-align: center;}
+        
+    </style>
+</head>
+<body background="805200.jpg">
+    <header>
+        <h1>Oi amigo</h1>
+        <button onclick="inicio()">Clique Aqui </button>
+    </header>
+    <script>
+        function inicio(){
+            let nome = window.prompt(`Olá! Qual é o seu nome?`)
+            let idade = window.prompt(`${nome}, Qual é a sua idade`)
+            window.alert(`Oi ${nome}! É um prazer te conhecer!`)
+        }
+    </script>
+</body>
+</html>

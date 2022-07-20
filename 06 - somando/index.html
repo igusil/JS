@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            color: antiquewhite ;text-align: center; 
+            font-style: italic; font-size: 15pt; padding-top: 200px;
+        }
+        button{
+            padding: 60px; background-color: blueviolet; color: antiquewhite;
+            background-image: url('245.jpg'); border-radius: 20px;
+        }
+        section{
+            color: antiquewhite; text-align: center; 
+            padding-top: 15px; font-style: italic ;font-size: 30pt;
+            
+        }
+    </style>
+</head>
+<body background="245.jpg">
+    <header>
+        <h1>Somando Números</h1>
+        <button id="area" onclick="somar()"><strong>Clique Aqui</strong></button>
+        
+    </header>
+    <section id="res">
+        
+    </section>
+   
+    <script>
+        
+
+        function somar(){
+        
+           let n1 = Number(window.prompt("Digite um número: "))
+            let n2 = Number(window.prompt("Digite outro número: "))
+            let res = document.querySelector('section#res') 
+
+            res.innerHTML = `A soma entre <strong>${n1}</strong> e <strong>${n2}</strong> é igual a: <strong>${n1+n2}</strong>`
+
+        }
+
+        let a = window.document.getElementById('area')
+        a.addEventListener('mouseenter', entrar)
+
+        function entrar (){
+            a.innerText = 'Entrou, clique aqui!'
+        }
+
+        let b = window.document.getElementById('area')
+        b.addEventListener('mouseout', sair)
+
+        function sair (){
+            b.innerText = 'Clique Aqui'
+        }
+
+    
+    </script>
+</body>
+</html>

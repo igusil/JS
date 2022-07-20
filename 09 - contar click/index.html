@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Cliques</title>
+    <style>
+        body{
+            text-align: center;font-style: italic;
+            font-size: 20pt;padding-top: 100px;
+            background-image: url("245.jpg");
+            color: antiquewhite;
+            
+        }
+        button{
+            padding: 50px;padding-top: 40px;background-image: url("245.jpg");
+            color: antiquewhite;border-radius: 20px;
+        }
+        div#res{
+            padding-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador de cliques</h1>
+    
+    <section>
+        <div>
+            <button id="c1" onclick="contar()"><strong>Clique aqui</strong></button>
+            <button id="c2" onclick="zerar()"><strong>Zerar</strong></button>
+        </div>
+        <div id="res">
+            Contar
+        </div>
+    </section>
+    <script>
+        let contador = 0
+        let res = document.querySelector('div#res')
+
+        let a = document.getElementById('c1')
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+
+        function entrou (){
+            a.innerText = `Entrou, Clique aqui`
+        }
+        function saiu(){
+            a.innerText = 'Clique Aqui'
+        }
+
+        function contar (){
+            
+            contador ++
+            res.innerHTML = `O contador está com <strong>${contador}</strong>`
+        }
+
+        let ms = document.getElementById('c2')
+        ms.addEventListener('mouseenter', entrar)
+        ms.addEventListener('mouseout', sair)
+
+        function entrar (){
+            ms.innerText = 'Zerar Aqui'
+        }
+        function sair(){
+            ms.innerText = 'Zerar'
+        }
+
+        function zerar(){
+            contador = 0
+            res.innerHTML = null
+        }
+    </script>
+</body>
+</html>

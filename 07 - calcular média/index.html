@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+    <style> 
+        body{
+            text-align: center; padding-top: 100px; font-size: 20pt; 
+            font-style: italic; color: antiquewhite; background-image: url(245.jpg);
+        }
+        button{
+            text-align: center;padding: 80px; background-image: url('245.jpg');
+            color: antiquewhite; border-radius: 25px;
+        }
+        section{
+            padding-top: 15px; color: antiquewhite; font-size: 30pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Média do Aluno</h1>
+    <button id="area" onclick="clicar()"><strong>Clique Aqui</strong></button>
+    <section id="res">
+        
+    </section>
+    <script>
+        function clicar(){
+            var nome = window.prompt("Qual é o seu nome? ")
+            var n1 = Number(window.prompt("Qual sua primeira nota? "))
+            var n2 = Number(window.prompt(`${nome}, além de ${n1}, Qual sua outra nota? `))
+            var res = document.querySelector('section#res')
+
+            res.innerHTML = `Calculando a média final de <strong>${nome}</strong>.`
+            res.innerHTML += `<p>As notas obtidas foram <strong>${n1}</strong> e <strong>${n2}</strong>.</p>`
+            res.innerHTML += `<p><strong>${nome}</strong>, A sua média é <strong>${(n1+n2)/2}!</strong></p>`
+        }
+
+        let a = document.getElementById("area")
+        a.addEventListener('mouseenter', entrar)
+
+        let b = document.getElementById('area')
+        b.addEventListener('mouseout', sair)
+
+        function entrar (){
+            a.innerText = 'Entrou, Clique aqui'
+        }
+        function sair(){
+            a.innerText = 'Clique aqui'
+        }
+
+    </script>
+</body>
+</html>
