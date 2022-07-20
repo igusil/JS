@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interagir</title>
+</head>
+<style>
+    body{
+        text-align: center;padding-top: 100px;color: antiquewhite;
+        font-size: 20pt;background-image: url("245.jpg");
+        font-style: italic;
+    }
+    button{
+        padding: 80px;color: antiquewhite; background-image: url("245.jpg");
+        border-radius: 30px;
+    }
+    section{
+        padding-top: 40px;
+    }
+</style>
+<body>
+    <h1>JavaScript Externo</h1>
+    <button id="ac1" onclick="click1()">Ação 1 </button>
+    <button id="ac2" onclick="click2()">Ação 2 </button>
+    <button id="ac3" onclick="click3()">Ação 3 </button>
+    <button id="ac4" onclick="click4()">Ação 4 </button>
+
+    <section id="saida">
+        Aqui vou registrar suas ações com o botão acima
+    </section>
+
+    <script>
+        let a = document.getElementById('ac1')
+        let b = document.getElementById('ac1')
+        let c = document.getElementById('ac2')
+        let d = document.getElementById('ac2')
+        let e = document.getElementById('ac3')
+        let f = document.getElementById('ac3')
+        let g = document.getElementById('ac4')
+        let h = document.getElementById('ac4')
+
+
+        a.addEventListener('mouseenter', ent1)
+        b.addEventListener('mouseout', sa1)
+        c.addEventListener('mouseenter', ent2)
+        d.addEventListener('mouseout', sa2)
+        e.addEventListener('mouseenter', ent3)
+        f.addEventListener('mouseout', sa3)
+        g.addEventListener('mouseenter', ent4)
+        h.addEventListener('mouseout', sa4)
+
+
+        let resu = document.getElementById('saida')
+
+        function click1 (){
+            resu.innerHTML += '<p>Clicou no primero botão</p>'
+        }
+        function ent1 (){
+            a.innerText = 'Clique aqui agora'
+        }
+        function sa1(){
+            b.innerText = 'Ação 1'
+        }
+        //----------------------------------------------------
+
+        function click2 (){
+            resu.innerHTML += '<p>Clicou no segundo botão</p>'
+        }
+        function ent2(){
+            c.innerText = 'Clique aqui agora'
+        }
+        function sa2(){
+            d.innerText = 'Ação 2'
+        }
+        //----------------------------------------------------
+
+        function click3 (){
+            resu.innerHTML += '<p>Clicou no terceiro botão</p>'
+        }
+        function ent3 (){
+            e.innerText = 'Clique aqui agora'
+        }
+        function sa3 (){
+            f.innerText = 'Ação 3'
+        }
+        //---------------------------------------------------
+
+        function click4 (){
+            resu.innerHTML += '<p>Clicou no quarto botão</p>'
+        }
+        function ent4 (){
+            g.innerText = 'Clique aqui agora'
+        }
+        function sa4(){
+            h.innerText = 'Ação 4'
+        }
+        
+
+    </script>
+</body>
+</html>
