@@ -1,7 +1,7 @@
 # js-exercises
  atividades em js
 
-https://igusil.github.io/JS/01%20-%20Ol%C3%A1%20Mundo%20com%20prompt/
+https://igusil.github.io/JS/01%20-%20Ol%C3%A1%20Mundo%20com%20prompt/  01 - Olá Mundo com prompt
 
 https://igusil.github.io/JS/02%20-%20interagindo/  02 - interagindo
 
